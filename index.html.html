@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>InstantPing</title>
+    <link rel="shortcut icon" href="./images//whatsapp-logo.svg" type="image/x-icon">
+
+</head>
+<body>
+    <section id="first-page">
+        <div class="first-3">
+   <a href="#first-page"><h1 class="first">InstantPing</h1></a>
+   <div class="send-msgg">
+   <a href="#message-page"><p class="send-msg">Send a message</p></a>
+   </div>
+   <img src="images/whatsapp.png" class="whatsapp-logo" />
+   <div class="underline"></div>
+   </div>
+   <p class="welcome">Welcome to <span class="only">InstantPing!</span></p>
+   <img src="images/happy cartoon.png" alt="happy-cartoon" class="happy-cartoon" />
+   <p class="expl">InstantPing revolutionizes communication by allowing users to send texts directly to registered WhatsApp numbers
+     without the need to save them as contacts. Designed for convenience and privacy, 
+     InstantPing ensures that all chats automatically disappear after a specified period,
+      enhancing security and reducing clutter. This innovative tool is ideal for professionals and individuals 
+      seeking streamlined and confidential interactions, offering a seamless and efficient messaging experience.😊</p>
+      </section>
+
+      <section id="message-page">
+        
+        <div class="fomu">
+        <div class="white-container">
+        </div>
+       <div id="form">
+        <label for="phone-no" class="two-fast">Phone Number</label><br><br>
+        <input type="number" id="phone-no" name="phone-no" maxlength="13" minlength="10" required pattern="[0-9]{10}">
+        <br><br>
+        <label for="message" class="two-fast">Message</label><br><br>
+        <textarea id="message" name="message" minlength="1" maxlength="300" required title="Field cannot be empty"> </textarea>
+        <br><br>
+        
+        <input type="submit" value="SEND" class="submit" id="submit">
+        
+    
+       </div>
+
+    </div>
+    <img src="images/Untitled-1.png" alt="happy-boy" class="happy-boy">
+    <p class="boy-caption">Send messages instantly to WhatsApp numbers with ease.</p>
+      </section>
+
+
+      <section id="last-page">
+
+    <img src="images/466fa02c86_img-ec2cba46facc-1.png"  alt="women-pic" class="women-pic"/>
+
+    <p class="thanks">Thank you for trying it out, glad you enjoyed!</p>
+    <div id="icon"><a href="" id="chat-bot-link"><img src="./images//support_agent.svg" alt="" srcset="" id="chat-bot"></a></div>
+    <div class="last-rect"></div>
+      </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <script>
+        const input = document.getElementById("phone-no")
+        const chat_bot_link = document.getElementById("chat-bot-link")
+        const submit = document.getElementById("submit")
+        const form = document.getElementById("form")
+        const cyber_msg_input= document.getElementById("message")
+        let phoneNumber;
+
+        const custom_msg_to_dev = "Hello, sir, i need an assitance in  InstantPing."
+        
+        chat_bot_link.href = "https://wa.me/+254717191119?text=" + custom_msg_to_dev
+
+        
+        const create_chat = () => {
+          if(input.value.length <= 1){
+            alert("couldnt look phone number 254 because it's too short")
+            span.href = "#"
+          }else if (input.value.length> 1 && input.value.length < 3 ){
+            alert("couldnt look phone number 254" + input.value + " because it isn't the correct length for country code 254.")
+            span.href = "#"
+          }
+          else if(input.value.length <= 9){
+              alert("Phone Number too short")
+            span.href = "#"
+          }else if (input.value.length >= 16){
+            alert("Phone Number too long")
+            span.href = "#"
+          }
+          else{
+            phoneNumber = "whatsapp://send?text=" + cyber_msg_input.value + "&phone=+254" + input.value
+          //  chat_bot_link.href = "https://wa.me/+254717191119?text=" + custom_msg_to_dev
+            location.href = phoneNumber
+          }
+        }
+
+        submit.addEventListener('click', create_chat)
+        
+        
+        
+        </script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
