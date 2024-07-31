@@ -1,243 +1,293 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 @font-face {
     font-family: "raleway.regular";
     src: url("./fonts/raleway.regular.ttf");
   }
 
-  /* *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-} */
-  html{
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #38a838;
+    border-radius: 1rem;
+}
+
+html{
     scroll-behavior: smooth;
-  }
+}
 
-  body {
-    font-family: "raleway.regular", sans-serif;
+body{
     background-color: azure;
+    padding-left: 20px;
+    padding-right: 20px;
+}
 
-  }
-
-  
-  .first{
+section{
+    width: 100%;
+    height: 100vh;
+}
+a{
+    text-decoration: none;
+}
+.landing-page{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.top-landing-page{
+    display: flex;
+    flex: .2;
+    align-items: center;
+    justify-content: space-between;
+}
+.intro-text-container{
+    display: flex;
+}
+.intro-text-container a{
     color: #218021;
     font-family:raleway;
     font-size: 80px;
-    margin-left: 30px;
-  }
- 
-  #first-page a{
-    text-decoration: none;
-  }
-#message-page{
-    background-color: white;
+    font-weight: 800;
 }
-  .send-msg{
-        font-family: raleway;
-        font-size: 35px;
-        margin-left: 900px;
-        margin-top: -110px;
-        font-weight: 700;
+#underline{
+    text-decoration: underline;
+    text-underline-offset: 30px;
 }
-.send-msgg a{
+.send-msg-container a{
     text-decoration: none;
     color:#218021;
+    font-family: raleway;
+    font-weight: 700;
+    font-size: 35px;
 }
-.send-msgg a:hover{
-    cursor: pointer;
-    color: rgb(97, 96, 96);
+
+.send-msg-container a:hover{cursor: pointer;
+color: rgb(97, 96, 96);
 }
 .whatsapp-logo{
-    width: 80px;
-    height: 80px;
-    margin-left: 1400px;
-    margin-top: -110px;
-    position: absolute;
+    height: 60px;
+    width: 60px;
 }
-.underline{
-    background-color: #218021;
-    width: 250px;
-    height: 12px;
-    margin-left: 30px;
-    border-radius: 20px;
-    margin-top: -20px;
+.bottom-landing-page{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
 }
-.first-3{
-    margin-top: -40px;
+.welcome-text-container{
+    
+    flex: .5;
+    padding-left: 13%;
+    padding-top: 100px;
+
 }
-.welcome{
-    font-family: raleway;
-    margin-left: 350px;
+.welcome-text{
     font-size: 70px;
-    margin-top: 110px;
     font-weight: 600;
+    font-family: raleway;
+    color: #0e520e;
 }
 .only{
-    color:#0e520e
+    color: #29A71A;
+    font-style: italic;
+}
+.bottom-landing-section{
+    display: flex;
+    flex: .7;
+}
+.left-bottom-landing-section{
+    flex: .5;
+}
+.right-bottom-landing-section{
+    flex: .5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .happy-cartoon{
-    width: 350px;
-    height: 350px;
-    margin-top: -40px;
-    margin-left: 100px;
-}
-.expl{
-    color:#0e520e;
-    font-family: raleway;
-    width: 900px;
-    margin-left: 550px;
-    font-size: 25px;
-   margin-top: -300px;
-   line-height: 30px;
-   text-align:justify;
-   letter-spacing: 1px;
+    width: 80%;
+    height: 80%;
 }
 
-.white-container{
-    background-color: rgb(245, 244, 244);
-    width: 600px;
-    height: 700px;
+.intro-text{
+    font-size: 25px;
+    width: 90%;
+    text-align: justify;
+    letter-spacing: 1.5px;
+    color:#0e520e;
+    font-family: raleway;
+
+}
+
+
+.form-page{
+    /* padding-top: 20px; */
+    background-color: white;  
+    display: flex;
+  
+}
+.left-form-page{
+    flex: .5;
+    display: flex;
     align-items: center;
-    margin-top: 200px;
-    margin-left: 450px;
+    justify-content: center;
+}
+
+#form{
+    background-color: rgb(245, 244, 244);
+    width: 90%;
+    height: 90%;
     box-shadow: 0px 0px 40px 0px  #38a838 ;
     border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
 }
-.phone-no{
-    font-family: raleway;
-    font-size: 35px;
-    font-weight: 600;
-    margin-top: -630px;
-    margin-left: 620px;
+#form div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
-#form{
-    margin-left: 580px;
-    margin-top: -600px;
-    font-family: raleway;
-    font-size: 32px;
-    font-weight: 700;
+
+
+.labels{
+    font-size: 24px;
+    font-weight: 800;
+    color: #0e520e;
 }
+
 #phone-no, #message{
     border: 1px solid rgb(4, 53, 4);
     outline: none;
     height: 50px;
-    width: 450px;
-    margin-left: -100px;
+    width: 80%;
     /* border-color: rgb(160, 165, 160); */
 }
-#phone-no{
-    border-radius: 30px;
-    
-}
-#message{
-    border-radius: 5px;
 
-}
-textarea{
- font-family: raleway;
- font-size: 20px;
- max-height: 100px;
- max-width: 450px;
- min-height: 50px;
- min-width: 300px;
- overflow: hidden;
- padding-top: 15px;
- padding-lefT: 5px;
-}
-input[type=number]{
+#phone-no{
+    border-radius: 25px;
     font: raleway;
     font-size: 20px;
-    max-width: 500px;
     text-align: center;
-   }
-   input::-webkit-outer-spin-button,
+    
+}
+input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-.two-fast{
-    margin-left: -100px;
+textarea{
+    border-radius: 5px;
+    padding-left: 20px;
+    padding-top: 10px;
+    font-family: raleway;
+    font-size: 20px;
+    max-height: 250px;
+    max-width: 80%;
+    min-height: 50px;
+    min-width: 80%;
 }
-.submit{
-    width: 400px;
-    height: 45px;
+
+.submit-btn{
+    width: 80%;
+    height: 50px;
     font-family: raleway;
     background-color: transparent;
     border: solid;
-    border-radius: 22.5px;
+    border-radius: 25px;
     border-color: #218021;
-    margin-top: 70px;
-    position: absolute;
-    margin-left: -50px;
     font-weight: 600;
     font-size: 24px;
+    color: #218021;
 }
-.submit:hover{
+.submit-btn:hover{
     cursor: pointer;
     background-color: #218021;
     color: white;
     font-weight: 600;
     transition: 0.5s ease-in;
 }
-.fomu{
-    margin-left: -250px;
+
+.right-form-page{
+    flex: .5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.right-form-page div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .happy-boy{
-    width: 300px;
-    height: 450px;
-    margin-left: 1000px;
-    margin-top: -500px;
+    width: 50%;
+    height: 90%;
 }
-.boy-caption{
-    font-family: raleway;
-    font-size: 40px;
+.happy-boy-caption-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
     font-weight: 700;
-    width: 500px;
-    margin-lefT: 960px;
-    margin-top: 0px;
+    width: 60%;
+    line-height: 40px;
+    font-style: italic;
+    text-align: center;
+    color: #0e520e;
 }
+
+.developer-page{
+    display: flex;
+    position: relative;
+}
+.left-developer-page{
+    flex: .5;
+    flex: .5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .women-pic{
-    width: 800px;
-    height: 800px;
-    margin-left: -50px;
+    width: 80%;
+    height:80%;
 }
-.thanks{
-    font-family: raleway;
+
+
+.right-developer-page{
+    flex: .5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.thanks-msg{
     font-size: 65px;
+    width: 80%;
     font-weight: 800;
-    width: 500px;
-    margin-lefT: 800px;
-    margin-top: -560px;
-    width: 700px;
-}
-.last-rect{
-    /* background-color: #29A71A; */
-    width: 1520px;
-    height: 15px;
-    margin-top: 400px;
-    margin-left: -10px;
+    font-style: italic;
+    color: #218021;
+
 }
 
-::-webkit-scrollbar{
-    width: 10px;
-    background-color: white;
-}
-::-webkit-scrollbar-thumb{
-    width: 10px;
-    background-color: #29A71A;
-    border-radius: 10px;
-}
 
-#last-page{
-position: relative;
-}
 #icon{
     position: absolute;
-    bottom: 65px;
-    right: 65px;
-    height: 80px;
-    width: 80px;
+    bottom: 30px;
+    right: 20px;
+    height: 60px;
+    width: 60px;
     border: 3px solid #29A71A;
     border-radius: 50%;
     background-color: whitesmoke;
@@ -246,118 +296,152 @@ position: relative;
     justify-content: center;
 }
 
-#chat-bot{
-
-}
 #chat-bot:hover{
     transform: scale(1.5);
     transition: .5s ease;
 }
 
+/* .popup{
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+ */
 
 
 
 
 
+
+
+
+
+ @media only screen and (max-width: 1322px){
+
+    .thanks-msg{
+        font-size: 50px;
+    
+    }
+    .welcome-text{
+        font-size: 45px;
+    }
+    
+    .intro-text{
+        font-size: 22px;    
+    }
+    .send-msg-container a{
+        font-weight: 500;
+        font-size: 20px;
+    }
+    .intro-text-container a{
+        font-size: 30px;
+        font-weight: 800;
+    }
+    #underline{
+        text-underline-offset: 10px;
+    }
+    .welcome-text-container{
+        padding-left: 5%;
+        padding-top: 10px;
+        height: 100px;
+        flex: .2;
+    }
+
+}
 
 
 
 
 @media only screen and (max-width: 620px){
+
+    .thanks-msg{
+        font-size: 25px;
     
-    body{
-        background-color: #ffffff;
-    }.first{
-        font-size: 30px;
-        margin-top: 70px;
-        margin-left: 30px;
     }
-    .underline{
-        width: 100px;
-        height: 8px;
-        margin-top: -135px;
-    }
-    .send-msg{
-        font-size: 30px;
-        margin-top: 70px;
-        margin-left: 200px;
-    }
-    .whatsapp-logo{
-        width: 40px;
-        height: 40px;
-        margin-left: 530px;
-        margin-top: -180px;
-        position: absolute;
+    .welcome-text{
+        font-size: 45px;
     }
     
-    .welcome{
-        font-size: 50px; 
-        top: 180px;
-        position: absolute;
-        left: -42px;
-           
-}
-    .happy-cartoon{
-        width: 250px;
-        height: 250px;
-       margin-top: 160px;
-       margin-left: -5px;
+    .intro-text{
+        font-size: 15px;    
     }
-    .expl{
-        font-size: 15px;
-        width: 500px;
-        letter-spacing: -0.5px;
-        margin-top: 20px;
-        margin-lefT: 40px;
-        color:#0e520e;
+    .send-msg-container a{
+        font-weight: 500;
+        font-size: 20px;
     }
-    .white-container{
-        margin-lefT: 20rem;
-        width: 450px;
-        margin-top: 5rem;
-}
-.two-fast{
-    font-size: 23px;
-   margin-left: -15rem;
+    .intro-text-container a{
+        font-size: 30px;
+        font-weight: 800;
+    }
+    #underline{
+        text-underline-offset: 10px;
+    }
+    .welcome-text-container{
+        padding-left: 5%;
+        padding-top: 10px;
+        height: 100px;
+        flex: .2;
+    
+    }
+
 }
 
-#phone-no, #message{
-    width: 300px;
-    margin-left: -13rem;
-    margin-top: -10rem;
-}
-.happy-boy{
-    width: 210px;
-    height: 350px;
-    margin-top: 280px;
-    margin-left: 350px;
-   
-}
-.submit{
-    margin-lefT: -15rem;
-}
-.women-pic{
-    width: 500px;
-    height:500px;
-    margin-left: 20px;
-    margin-top: 2rem;
-}
-.boy-caption{
-    font-size: 35px;
-    font-weight: 700;
-    margin-left: -5px;
-    width: 380px;
-    margin-top: -200px;
-    line-height: 40px;
-}
-.thanks{
-    font-size: 55px;
-    width: 600px;
-    margin-left: 0px;
-    margin-top: -50px;
-}
-.last-rect{
-    width: 580px;
+
+
+@media only screen and (max-width: 539px){
+
+    .bottom-landing-section{
+        flex-direction: column;
+    }
+
+    .welcome-text{
+        font-size: 30px;
+        font-weight: 300;
+    }
+    .only{
+        font-size: 30px;
+        font-weight: 700;
+    }
+    .intro-text{
+        font-size: 16px;    
+    }
+    .send-msg-container{
+        visibility: hidden;
+    }
+
+    .form-page{
+        flex-direction: column;
+    }
+    .form-page div{
+        height: 100%;
+    }
+    #phone-no, #message, .submit-btn{
+        height: 40px;
+    }
+    .labels{
+        font-size: 20px;
+    }
+    .submit-container{
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    }
+    .developer-page{
+        flex-direction: column;
+    }
     
-}
-}
+ }
